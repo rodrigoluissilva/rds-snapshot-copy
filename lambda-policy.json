@@ -1,0 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeRegions",
+                "rds:DescribeDBSnapshots",
+                "rds:CopyDBSnapshot",
+                "rds:DeleteDBSnapshot",
+                "rds:ListTagsForResource",
+                "rds:AddTagsToResource",
+                "rds:RemoveTagsFromResource"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
